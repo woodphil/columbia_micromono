@@ -1,0 +1,11 @@
+<div class=page>
+    <a href="{{ url_for('index') }}">Home</a>
+    {% if not session.logged_in %}
+    <a href="{{ url_for('login') }}">Log in</a>
+    {% else %}
+    <a href="{{ url_for('logout') }}">Log out</a>
+    <a href="{{ url_for('post_message') }}">Post Message</a>
+    {% endif %}
+    <a href="{{ url_for('create_account') }}">Create Account</a>
+</div>
+{% block body %}{% endblock %}

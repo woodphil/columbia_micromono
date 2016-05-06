@@ -1,0 +1,18 @@
+<!doctype html>
+{% extends "nav.html" %}
+{% block body %}
+<title>Microservices Message</title>
+<div class=page>
+    <h1>Microservices</h1>
+    <h1>Messages</h1>
+    
+    <ul id="messages">
+        {% for message in messages %}
+        <li>
+            <strong>{{message.title}}</strong>
+                <br>{{message.text}}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
